@@ -1,0 +1,205 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="panel">
+
+<p class="p-aviso" id="cargando">Cargando…</p>
+<p class="p-aviso" id="sin-config" hidden>Falta conectar Supabase: completá <code>supabaseUrl</code> y <code>supabaseKey</code> en <code>js/config.js</code>.</p>
+
+<!-- ===== Entrar ===== -->
+<section class="p-login" id="v-login" hidden>
+<div class="p-login__marca">
+<img class="logo" src="{{raiz}}img/logo.png" alt="Punto Carrasco Automóviles" width="528" height="264">
+<p class="p-caps">Panel del dueño</p>
+</div>
+<form class="p-login__form" id="f-login">
+<h1 class="t">Entrar</h1>
+<div class="f"><label for="l-email">Email</label><input id="l-email" name="email" class="in" type="email" autocomplete="username" inputmode="email" required></div>
+<div class="f"><label for="l-pass">Contraseña</label>
+<div class="p-pass"><input id="l-pass" name="password" class="in" type="password" autocomplete="current-password" required aria-describedby="login-error"><button type="button" id="mostrar-pass">Mostrar</button></div>
+<p class="p-err" id="login-error" hidden></p>
+</div>
+<button class="pbtn pri" type="submit" id="entrar">Entrar</button>
+</form>
+<a class="meta p-login__volver" href="{{raiz}}">‹ Volver a la web</a>
+</section>
+
+<!-- ===== Panel ===== -->
+<div class="p-app" id="app" hidden>
+<aside class="p-side">
+<img class="logo" src="{{raiz}}img/logo.png" alt="Punto Carrasco Automóviles" width="528" height="264">
+<nav class="p-side__nav" aria-label="Panel">
+<a href="#autos" data-ir="lista">Mis autos</a>
+<a href="#negocio" data-ir="negocio">Datos del negocio</a>
+<a href="{{raiz}}" target="_blank" rel="noopener" data-fresco>Ver la web ↗</a>
+</nav>
+<button type="button" class="p-salir" data-salir>Salir</button>
+</aside>
+
+<main class="p-main">
+
+<!-- Mis autos -->
+<section class="p-vista" id="v-lista" hidden>
+<header class="p-top">
+<div><h1 class="t">Mis autos</h1><p class="meta" id="resumen"></p></div>
+<span class="meta p-hola solo-movil" id="hola"></span>
+<button class="pbtn pri solo-compu" type="button" data-nuevo>+ Agregar un auto</button>
+</header>
+<div class="p-filtros">
+<div class="p-tabs" role="group" aria-label="Filtrar por estado" id="tabs"></div>
+<label for="buscar" class="sr-only">Buscar</label>
+<input id="buscar" class="in p-buscar" type="search" placeholder="Buscar por marca o modelo" autocomplete="off">
+</div>
+<p class="meta p-nota">Lo que guardes se publica solo en la web en un par de minutos.</p>
+<div class="p-lista" id="lista"></div>
+<div class="p-agregar solo-movil"><button class="pbtn pri" type="button" data-nuevo>+ Agregar un auto</button></div>
+</section>
+
+<!-- Editor -->
+<section class="p-vista" id="v-editor" hidden>
+<div class="p-ed-bar solo-movil">
+<button type="button" class="p-ed-bar__a" data-volver>‹ Mis autos</button>
+<a class="p-ed-bar__a p-rojo" id="ed-ver-m" href="#" target="_blank" rel="noopener" data-fresco hidden>Ver en la web</a>
+</div>
+<header class="p-top p-top--ed">
+<div><button type="button" class="p-link solo-compu" data-volver>‹ Mis autos</button><h1 class="t" id="ed-titulo">Agregar un auto</h1></div>
+<div class="p-top__acc solo-compu"><span class="meta" id="ed-guardado"></span><a class="pbtn" id="ed-ver" href="#" target="_blank" rel="noopener" data-fresco hidden>Ver en la web</a><button type="submit" form="f-auto" class="pbtn pri">Guardar cambios</button></div>
+</header>
+
+<form class="p-ed" id="f-auto" novalidate>
+<div class="p-ed__izq">
+<section class="pcard p-ed__fotos" aria-labelledby="h-fotos">
+<div class="pcard__head">
+<div><h2 id="h-fotos" class="h">Fotos</h2><p class="meta solo-compu">Arrastrá para ordenar · la primera es la portada</p></div>
+<span class="meta" id="fotos-cuenta">0 de 20</span>
+</div>
+<div class="p-fotos-btn">
+<label class="pbtn pri p-camara"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Sacar foto<input type="file" accept="image/*" capture="environment" id="f-camara"></label>
+<label class="pbtn p-galeria"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 16l5-5 4 4 3-3 6 6"/></svg>Elegir de la galería<input type="file" accept="image/*" multiple id="f-fotos"></label>
+</div>
+<p class="meta">Sacalas de costado, con el auto entero y el celular horizontal: se recortan a 4:3.<span class="solo-movil"> Tocá ⋯ en una foto para cambiar el orden.</span></p>
+<p class="meta p-subiendo" id="subiendo" hidden></p>
+<div class="p-tiles" id="fotos"></div>
+<div class="p-menu-foto" id="menu-foto" hidden>
+<p id="menu-foto-t">Foto · opciones</p>
+<button type="button" data-foto="portada">Usar como portada</button>
+<button type="button" data-foto="antes">‹ Mover antes</button>
+<button type="button" data-foto="despues">Mover después ›</button>
+<button type="button" data-foto="borrar" class="p-menu-foto__borrar">Borrar foto</button>
+<button type="button" data-foto="cerrar">Cerrar</button>
+</div>
+</section>
+
+<section class="pcard p-ed__equip" aria-labelledby="h-eq">
+<h2 id="h-eq" class="h">Equipamiento</h2>
+<div class="p-chips" id="equip" role="group" aria-labelledby="h-eq"></div>
+<div class="p-otro"><label for="equip-otro" class="sr-only">Agregar otro equipamiento</label><input id="equip-otro" class="in" placeholder="Agregar otro…" autocomplete="off"><button type="button" class="pbtn" id="equip-agregar">Agregar</button></div>
+</section>
+
+<section class="pcard p-ed__desc" aria-labelledby="h-desc">
+<h2 id="h-desc" class="h"><label for="descripcion">Descripción</label></h2>
+<textarea id="descripcion" name="descripcion" class="in" rows="6"></textarea>
+<p class="meta">Escribilo como en Instagram: corto y directo.</p>
+</section>
+</div>
+
+<div class="p-ed__der">
+<section class="pcard p-ed__precio" aria-labelledby="h-precio">
+<h2 id="h-precio" class="h">Precio y estado</h2>
+<div class="p-fila">
+<div class="f p-moneda"><span class="lg" id="l-moneda">Moneda</span><div class="p-seg" role="group" aria-labelledby="l-moneda" data-campo="moneda"><button type="button" data-v="USD">U$S</button><button type="button" data-v="UYU">$</button></div></div>
+<div class="f p-crece"><label for="precio">Precio</label><input id="precio" name="precio" class="in p-precio" inputmode="numeric" placeholder="Vacío = Consultar" autocomplete="off"></div>
+</div>
+<div class="f"><label for="cuotas">Cuotas <span class="meta">(opcional)</span></label><input id="cuotas" name="cuotas" class="in" placeholder="Ej.: o 36 cuotas de U$S 270" autocomplete="off"></div>
+<div class="f"><span class="lg" id="l-estado">Estado</span><div class="p-seg" role="group" aria-labelledby="l-estado" data-campo="estado"><button type="button" data-v="disponible">Disponible</button><button type="button" data-v="reservado">Reservado</button><button type="button" data-v="vendido">Vendido</button></div></div>
+<div class="p-sw-fila"><div><p class="lg" id="l-dest">Destacado</p><p class="meta">Sale arriba en el inicio</p></div><button type="button" class="p-sw" role="switch" aria-checked="false" aria-labelledby="l-dest" data-sw="destacado"><span></span></button></div>
+<div class="p-sw-fila"><div><p class="lg" id="l-pub">Se ve en la web</p><p class="meta">Apagado = borrador, solo lo ves vos</p></div><button type="button" class="p-sw" role="switch" aria-checked="true" aria-labelledby="l-pub" data-sw="publicado"><span></span></button></div>
+</section>
+
+<section class="pcard p-ed__auto" aria-labelledby="h-auto">
+<h2 id="h-auto" class="h">El auto</h2>
+<div class="f"><label for="marca">Marca</label><input id="marca" name="marca" class="in" list="marcas" autocomplete="off" required></div>
+<div class="f"><label for="modelo">Modelo</label><input id="modelo" name="modelo" class="in" placeholder="Ej.: Onix" autocomplete="off" required></div>
+<div class="f"><label for="version">Versión</label><input id="version" name="version" class="in" placeholder="Ej.: LT 1.0 Turbo" autocomplete="off"></div>
+<div class="p-2col">
+<div class="f"><label for="anio">Año</label><input id="anio" name="anio" class="in" inputmode="numeric" placeholder="Vacío = a consultar" autocomplete="off"></div>
+<div class="f"><label for="km">Kilómetros</label><input id="km" name="km" class="in" inputmode="numeric" placeholder="Vacío = a consultar" autocomplete="off"></div>
+</div>
+<div class="f"><span class="lg" id="l-tipo">Tipo</span><div class="p-chips" role="group" aria-labelledby="l-tipo" data-campo="carroceria"></div></div>
+<div class="f"><span class="lg" id="l-comb">Combustible</span><div class="p-seg" role="group" aria-labelledby="l-comb" data-campo="combustible"><button type="button" data-v="Nafta">Nafta</button><button type="button" data-v="Diésel">Diésel</button><button type="button" data-v="Híbrido">Híbrido</button><button type="button" data-v="Eléctrico">Eléctrico</button></div></div>
+<div class="f"><span class="lg" id="l-caja">Caja</span><div class="p-seg" role="group" aria-labelledby="l-caja" data-campo="transmision"><button type="button" data-v="Manual">Manual</button><button type="button" data-v="Automática">Automática</button></div></div>
+<div class="p-2col">
+<div class="f"><label for="motor">Motor</label><input id="motor" name="motor" class="in" placeholder="Ej.: 1.0 Turbo" autocomplete="off"></div>
+<div class="f"><label for="color">Color</label><input id="color" name="color" class="in" placeholder="Ej.: Blanco" autocomplete="off"></div>
+<div class="f"><label for="puertas">Puertas</label><input id="puertas" name="puertas" class="in" inputmode="numeric" autocomplete="off"></div>
+<div class="f"><label for="duenos">Dueños</label><input id="duenos" name="duenos" class="in" inputmode="numeric" autocomplete="off"></div>
+</div>
+<datalist id="marcas"><option>Audi</option><option>BMW</option><option>BYD</option><option>Chery</option><option>Chevrolet</option><option>Citroën</option><option>Fiat</option><option>Ford</option><option>Honda</option><option>Hyundai</option><option>Jeep</option><option>Kia</option><option>Mercedes-Benz</option><option>Mitsubishi</option><option>Nissan</option><option>Peugeot</option><option>Renault</option><option>Suzuki</option><option>Toyota</option><option>Volkswagen</option></datalist>
+</section>
+
+<p class="p-err" id="ed-error" hidden></p>
+<button type="button" class="p-borrar" id="borrar" hidden>Borrar este auto</button>
+</div>
+</form>
+
+<div class="p-guardar solo-movil">
+<button type="submit" form="f-auto" class="pbtn pri">Guardar cambios</button>
+<p class="meta" id="ed-guardado-m"></p>
+</div>
+</section>
+
+<!-- Datos del negocio -->
+<section class="p-vista" id="v-negocio" hidden>
+<header class="p-top">
+<div><h1 class="t">Datos del negocio</h1><p class="meta">Lo que ponés acá sale en toda la web: botones, pie de página y “Dónde estamos”.</p></div>
+<button type="submit" form="f-negocio" class="pbtn pri solo-compu">Guardar</button>
+</header>
+<form class="p-neg" id="f-negocio" novalidate>
+<section class="pcard" aria-labelledby="h-wa">
+<h2 id="h-wa" class="h">WhatsApp y teléfonos</h2>
+<div class="f"><label for="n-whatsapp">WhatsApp que recibe los mensajes</label><input id="n-whatsapp" name="whatsapp" class="in" type="tel" inputmode="tel" placeholder="Ej.: 095 496 461" autocomplete="off" required><p class="meta">Todos los botones “Me interesa” van a este número.</p></div>
+<div class="f"><label for="n-fijo">Teléfono fijo</label><input id="n-fijo" name="fijo" class="in" type="tel" inputmode="tel" autocomplete="off"></div>
+<div class="f"><label for="n-celular">Otro celular</label><input id="n-celular" name="celular" class="in" type="tel" inputmode="tel" autocomplete="off"></div>
+</section>
+<section class="pcard" aria-labelledby="h-dir">
+<h2 id="h-dir" class="h">Dirección</h2>
+<div class="f"><label for="n-direccion">Dirección</label><input id="n-direccion" name="direccion" class="in" autocomplete="off"></div>
+<div class="f"><label for="n-ciudad">Barrio / ciudad</label><input id="n-ciudad" name="ciudad" class="in" autocomplete="off"></div>
+<div class="f"><label for="n-mapa">Link de Google Maps</label><input id="n-mapa" name="mapa" class="in" type="url" placeholder="Pegá el link de Google Maps" autocomplete="off"></div>
+</section>
+<section class="pcard" aria-labelledby="h-hor">
+<h2 id="h-hor" class="h">Horarios</h2>
+<div class="p-dia"><span></span><span class="meta">Desde</span><span class="meta">Hasta</span></div>
+<div class="p-dia"><label for="n-semana-d">Lunes a viernes</label><input id="n-semana-d" name="semana-d" class="in" inputmode="numeric" placeholder="9:00" autocomplete="off"><input name="semana-h" class="in" inputmode="numeric" placeholder="19:00" aria-label="Lunes a viernes hasta" autocomplete="off"></div>
+<div class="p-dia"><label for="n-sabado-d">Sábado</label><input id="n-sabado-d" name="sabado-d" class="in" inputmode="numeric" placeholder="9:00" autocomplete="off"><input name="sabado-h" class="in" inputmode="numeric" placeholder="13:00" aria-label="Sábado hasta" autocomplete="off"></div>
+<div class="p-dia"><label for="n-domingo-d">Domingo</label><input id="n-domingo-d" name="domingo-d" class="in" inputmode="numeric" placeholder="Cerrado" autocomplete="off"><input name="domingo-h" class="in" inputmode="numeric" placeholder="Cerrado" aria-label="Domingo hasta" autocomplete="off"></div>
+<p class="meta">Vacío = cerrado.</p>
+</section>
+<section class="pcard" aria-labelledby="h-redes">
+<h2 id="h-redes" class="h">Redes</h2>
+<div class="f"><label for="n-instagram">Instagram</label><input id="n-instagram" name="instagram" class="in" placeholder="@usuario" autocomplete="off"></div>
+<div class="f"><label for="n-facebook">Facebook</label><input id="n-facebook" name="facebook" class="in" placeholder="Link o usuario" autocomplete="off"></div>
+</section>
+<section class="pcard p-neg__ancho" aria-labelledby="h-fin">
+<h2 id="h-fin" class="h"><label for="n-financiacion">Financiación</label></h2>
+<textarea id="n-financiacion" name="financiacion" class="in" rows="4" placeholder="Con qué financiera trabajan, hasta cuántas cuotas, cuánto hay que entregar y qué papeles traer."></textarea>
+<p class="meta">Sale en el inicio, en “¿Lo querés en cuotas?”. Vacío = no se muestra.</p>
+</section>
+<p class="p-err p-neg__ancho" id="neg-error" hidden></p>
+<button type="submit" class="pbtn pri p-neg__ancho solo-movil" id="guardar-negocio">Guardar</button>
+</form>
+</section>
+
+</main>
+
+<nav class="p-bn" aria-label="Panel">
+<a href="#autos" data-ir="lista"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 16h18M5 16l2-6h10l2 6M7 19v-3M17 19v-3"/></svg>Mis autos</a>
+<a href="#negocio" data-ir="negocio"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12zM9 21v-6h6v6"/></svg>Datos del negocio</a>
+<a href="{{raiz}}" target="_blank" rel="noopener" data-fresco><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg>Ver la web</a>
+<button type="button" data-salir><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"/></svg>Salir</button>
+</nav>
+</div>
+
+<div class="p-toast" id="toast" role="status" hidden></div>
+<script type="module" src="{{raiz}}js/admin.js?v={{v.admin}}"></script>
+
+</body>
+</html>

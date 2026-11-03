@@ -9,6 +9,7 @@
 //   node scripts/generar.js --local               → para probar: python3 -m http.server 8832 -d _site
 //   node scripts/generar.js --local --ejemplos    → con los autos de ejemplo de js/autos.js (sin Supabase)
 //   SOLO_SI_CAMBIO=1 node scripts/generar.js      → no hace nada si los autos no cambiaron desde la última publicación
+//   NEGOCIO_JSON=fila.json node scripts/generar.js --local  → prueba una fila de `negocios` sin tocar la base
 //
 // Sin dependencias, solo Node 18+.
 const fs = require('fs');
@@ -102,6 +103,7 @@ async function leerSupabase() {
 
 // Datos del negocio que el dueño edita desde el panel. Si no hay fila, se usa js/config.js tal cual.
 async function leerNegocio() {
+  if (process.env.NEGOCIO_JSON) return JSON.parse(fs.readFileSync(process.env.NEGOCIO_JSON, 'utf8'));
   const res = await fetch(`${C.supabaseUrl}/rest/v1/negocios?select=*&concesionaria=eq.${encodeURIComponent(C.concesionaria)}`, { headers: cabeceras() }).catch(() => null);
   if (!res || !res.ok) {
     console.warn(`Aviso: no se pudieron leer los datos del negocio (${res ? res.status : 'sin conexión'}), se usa js/config.js.`);
