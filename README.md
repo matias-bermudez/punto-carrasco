@@ -2,7 +2,7 @@
 
 Sitio de Punto Carrasco Automóviles (Av. Giannattasio, Ciudad de la Costa): autos usados con el precio a la vista, ficha de cada auto, vendé o permutá y dónde estamos, todo coordinado por WhatsApp. El dueño carga los autos y los datos del negocio desde el panel (`/admin/`).
 
-**Web:** https://matias-bermudez.github.io/punto-carrasco/
+**Web:** https://punto-carrasco.pages.dev/
 
 ## Cómo funciona
 

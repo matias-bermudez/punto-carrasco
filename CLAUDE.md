@@ -4,7 +4,7 @@ Web de **Punto Carrasco Automóviles** (Av. Giannattasio, Ciudad de la Costa, Ca
 Sigue las reglas de la Plataforma Automotoras (`~/Proyectos/plataforma-automotoras/README.md`); implementación de referencia: DN (`~/Proyectos/DNAutos`).
 
 - Repo: https://github.com/matias-bermudez/punto-carrasco (público, GitHub Pages con fuente GitHub Actions)
-- Web: https://matias-bermudez.github.io/punto-carrasco/
+- Web: https://punto-carrasco.pages.dev/
 - Seguimiento: issues del repo. Los commits cierran issues con `Closes #N`.
 - Base compartida: `concesionaria: 'punto-carrasco'`. Workflow que publica: `publicar.yml`.
 

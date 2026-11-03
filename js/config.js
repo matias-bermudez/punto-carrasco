@@ -29,7 +29,7 @@ window.PC_CONFIG = {
   concesionaria: 'punto-carrasco',
 
   // URL pública del sitio, con / al final. Si se compra dominio, cambiarla acá.
-  sitio: 'https://matias-bermudez.github.io/punto-carrasco/',
+  sitio: 'https://punto-carrasco.pages.dev/',
 
   // false = Google no indexa la web (meta noindex). Pasar a true al lanzar.
   indexar: false
