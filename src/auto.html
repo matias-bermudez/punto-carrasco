@@ -1,0 +1,66 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="{{claseBody}}">
+
+{{> header}}
+<div class="ficha-bar solo-movil">
+<a class="ib" href="{{raiz}}autos/">‹ Autos</a>
+<button class="ib" type="button" id="compartir" aria-label="Compartir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6"/></svg></button>
+</div>
+
+<main id="contenido" class="ficha">
+<nav class="migas" aria-label="Ruta"><a href="{{raiz}}autos/">Todos los autos</a> <span aria-hidden="true">/</span> <span>{{a.marca}} {{a.modelo}}</span></nav>
+
+<div class="ficha__grid">
+<div class="ficha__main">
+
+<section class="galeria" aria-label="Fotos">
+<div class="galeria__foto ph{{clasePh}}" id="foto" data-auto="{{a.id}}">
+{{galeria.principal}}
+{{reservado}}
+{{galeria.flechas}}
+{{galeria.contador}}
+</div>
+{{galeria.puntos}}
+{{galeria.ayuda}}
+{{galeria.thumbs}}
+</section>
+
+<section class="ficha__datos" aria-labelledby="datos">
+<h2 id="datos" class="t">Datos principales</h2>
+<dl>{{datos}}</dl>
+</section>
+
+{{equip}}
+
+{{desc}}
+</div>
+
+<aside class="ficha__aside" aria-label="Precio y contacto">
+<div class="ficha__titulo">
+<p class="mk">{{a.mk}}</p>
+<h1 class="t">{{a.modeloCompleto}}</h1>
+</div>
+<div class="ficha__precio">
+<span class="circ"><span class="price">{{a.precio}}</span>{{icono.circulo}}</span>
+{{cuota}}
+</div>
+<a class="btn wa solo-compu" href="{{interesa}}" target="_blank" rel="noopener">{{icono.wa}}Me interesa</a>
+<div class="burbuja solo-compu"><span class="meta">Se abre WhatsApp con este mensaje:</span>{{interesaTexto}}</div>
+<a class="btn" href="{{verPersona}}" target="_blank" rel="noopener">Ver el auto en persona</a>
+{{llama}}
+{{estaEn}}
+</aside>
+</div>
+
+{{parecidos}}
+</main>
+
+{{> footer}}
+
+<div class="barra barra--ficha solo-movil">
+<div class="barra__precio"><span class="price">{{a.precio}}</span><span class="meta">{{a.corto}}</span></div>
+<a class="btn wa" href="{{interesa}}" target="_blank" rel="noopener">{{icono.wa}}Me interesa</a>
+</div>
+
+</body>
+</html>
