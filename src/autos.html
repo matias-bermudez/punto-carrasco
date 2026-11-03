@@ -1,0 +1,93 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="pag-catalogo{{claseBody}}">
+
+{{> header}}
+
+<main id="contenido" class="cat">
+<div class="cat__head">
+<div class="cat__titulo">
+<h1 class="t">Todos los autos</h1>
+<p class="meta" id="conteo" aria-live="polite">{{conteo}}</p>
+</div>
+<div class="orden solo-compu"{{hayAutos}}>
+<label for="orden">Ordenar</label>
+<select id="orden" class="in">
+<option value="recientes">Más nuevos primero</option>
+<option value="precio-asc">Precio: menor a mayor</option>
+<option value="precio-desc">Precio: mayor a menor</option>
+<option value="km">Menos kilómetros</option>
+</select>
+</div>
+</div>
+
+<div class="cat__barra solo-movil"{{hayAutos}}>
+<div class="cat__barra-fila">
+<button class="ib" type="button" id="abrir-filtros" aria-controls="filtros" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filtros</button>
+<label for="orden-m" class="sr-only">Ordenar</label>
+<select id="orden-m" class="ib cat__orden-m">
+<option value="recientes">Más nuevos primero</option>
+<option value="precio-asc">Precio: menor a mayor</option>
+<option value="precio-desc">Precio: mayor a menor</option>
+<option value="km">Menos kilómetros</option>
+</select>
+</div>
+<div class="chips chips--fila" role="group" aria-label="Tipo" data-filtro="tipo">{{chips.tipo}}</div>
+</div>
+
+<div class="cat__cuerpo">
+<aside class="filtros" id="filtros" aria-label="Filtros"{{hayAutos}}>
+<div class="filtros__top solo-movil"><p class="t">Filtros</p><button class="ib" type="button" id="cerrar-filtros">Cerrar</button></div>
+<fieldset><legend>Tipo</legend><div class="chips" data-filtro="tipo">{{chips.tipo}}</div></fieldset>
+<fieldset><legend>Combustible</legend><div class="chips" data-filtro="comb">{{chips.comb}}</div></fieldset>
+<fieldset><legend>Caja</legend><div class="chips" data-filtro="caja">{{chips.caja}}</div></fieldset>
+<fieldset><legend>Precio (U$S)</legend>
+<div class="rango">
+<div class="f"><label for="pmin" class="meta">Desde</label><input id="pmin" class="in" inputmode="numeric" placeholder="5.000" autocomplete="off"></div>
+<div class="f"><label for="pmax" class="meta">Hasta</label><input id="pmax" class="in" inputmode="numeric" placeholder="20.000" autocomplete="off"></div>
+</div>
+</fieldset>
+<div class="busco solo-compu">
+<p class="hand">¿No está el que buscás?</p>
+<p class="meta">Decinos qué querés y te avisamos cuando entre.</p>
+<a class="btn wa" href="{{waBusco}}" target="_blank" rel="noopener">Avisame por WhatsApp</a>
+</div>
+<div class="filtros__pie solo-movil"><button class="btn wa" type="button" id="ver-filtrados">Ver los autos</button></div>
+</aside>
+
+<div class="cat__lista">
+<div class="tags" id="tags" role="group" aria-label="Filtros aplicados" hidden></div>
+<div class="grilla" id="grilla">{{grilla}}</div>
+
+<div class="cat__vacio" id="sin-resultados" hidden>
+<svg viewBox="0 0 360 120" aria-hidden="true"><path d="M10 104 C 50 102, 70 98, 100 70 C 140 34, 200 22, 260 26 C 300 30, 320 58, 330 84" fill="none" stroke="#C8202B" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/><path d="M10 110 L 350 110" stroke="#CFC7B9" stroke-width="2"/></svg>
+<h2 class="t">No hay autos con esos filtros.</h2>
+<p>Probá sacando alguno. O decinos qué buscás y te escribimos cuando entre uno así.</p>
+<div class="botones">
+<button class="btn" type="button" id="borrar-filtros">Borrar los filtros</button>
+<a class="btn wa" id="wa-busco" href="{{waBusco}}" target="_blank" rel="noopener">Avisame por WhatsApp</a>
+</div>
+</div>
+
+<div class="cat__vacio"{{sinAutos}}>
+<svg viewBox="0 0 360 120" aria-hidden="true"><path d="M10 104 C 50 102, 70 98, 100 70 C 140 34, 200 22, 260 26 C 300 30, 320 58, 330 84" fill="none" stroke="#C8202B" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/><path d="M10 110 L 350 110" stroke="#CFC7B9" stroke-width="2"/></svg>
+<h2 class="t">Estamos subiendo los autos a la web.</h2>
+<p>Mientras tanto, escribinos y te pasamos los que tenemos hoy, con fotos y precio. O decinos qué buscás y te avisamos cuando entre.</p>
+<div class="botones">
+<a class="btn wa" href="{{waStock}}" target="_blank" rel="noopener">{{icono.wa}}Preguntar por WhatsApp</a>
+{{igBoton}}
+</div>
+</div>
+
+<div class="busco solo-movil"{{hayAutos}}>
+<p class="hand">¿No está el que buscás?</p>
+<p class="meta">Decinos qué querés y te avisamos cuando entre.</p>
+<a class="btn wa" href="{{waBusco}}" target="_blank" rel="noopener">Avisame por WhatsApp</a>
+</div>
+</div>
+</div>
+</main>
+
+{{> footer}}
+
+</body>
+</html>
