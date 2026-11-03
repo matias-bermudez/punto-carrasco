@@ -82,8 +82,8 @@ button, input, select, textarea { font-family: inherit; }
 .ph { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--celeste); }
 .ph img { width: 100%; height: 100%; object-fit: cover; }
 .sinfoto { display: block; width: 100%; height: 100%; }
-.hero__vacio { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; text-decoration: none; }
-.hero__vacio img { mix-blend-mode: multiply; width: 52%; height: auto; }
+.hero__foto.hero__vacio { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; text-decoration: none; }
+.hero__vacio.ph img { mix-blend-mode: multiply; width: 52%; height: auto; object-fit: contain; }
 .hero__vacio .hand { font-size: 34px; }
 .is-res .ph img, .galeria__foto.is-res img { filter: saturate(.3) brightness(1.06); }
 .stamp { position: absolute; top: 16px; left: 12px; transform: rotate(-5deg); background: var(--crema); color: var(--rojo); border: 2px solid var(--rojo); font: 800 14px/1 Figtree, sans-serif; letter-spacing: .16em; text-transform: uppercase; padding: 9px 14px; }
