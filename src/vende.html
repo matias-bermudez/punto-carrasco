@@ -1,0 +1,58 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="pag-vende{{claseBody}}">
+
+{{> header}}
+
+<main id="contenido" class="vende">
+<div class="vende__head">
+<p class="hand">¿Y el tuyo?</p>
+<h1 class="t">Vendé o permutá tu auto</h1>
+<p class="vende__lead"><span class="solo-compu">Completá esto en un minuto. Se arma el mensaje de WhatsApp con todo ordenado y te respondemos por ahí.</span><span class="solo-movil">Un minuto. Se arma el mensaje de WhatsApp con todo ordenado.</span></p>
+</div>
+
+<div class="vende__cuerpo">
+<form class="vende__form" id="f-vende" novalidate>
+<fieldset class="campos">
+<legend class="t">Tu auto</legend>
+<div class="f f--movil-ancho"><label for="marca">Marca</label><input id="marca" name="marca" class="in" placeholder="Ej.: Volkswagen" autocomplete="off"></div>
+<div class="f f--movil-ancho"><label for="modelo">Modelo</label><input id="modelo" name="modelo" class="in" placeholder="Ej.: Gol Trend" autocomplete="off"></div>
+<div class="f"><label for="anio">Año</label><input id="anio" name="anio" class="in" inputmode="numeric" autocomplete="off"></div>
+<div class="f"><label for="km">Kilómetros</label><input id="km" name="km" class="in" inputmode="numeric" autocomplete="off"></div>
+<div class="f f--ancho"><span class="lg" id="deuda-l">¿Tiene deuda?<span class="solo-compu"> (patente, multas o prenda)</span></span>
+<div class="seg" role="group" aria-labelledby="deuda-l" data-campo="deuda"><button type="button" aria-pressed="false" data-v="No">No</button><button type="button" aria-pressed="false" data-v="Sí">Sí</button><button type="button" aria-pressed="false" data-v="No sé">No sé</button></div>
+</div>
+</fieldset>
+<fieldset class="campos campos--col">
+<legend class="t">¿Qué buscás a cambio?</legend>
+<div class="seg" role="group" aria-label="Qué buscás a cambio" data-campo="modo"><button type="button" aria-pressed="false" data-v="vender"><span class="solo-compu">Venderlo (plata)</span><span class="solo-movil">Plata</span></button><button type="button" aria-pressed="false" data-v="permuta"><span class="solo-compu">Cambiarlo por otro auto</span><span class="solo-movil">Otro auto</span></button></div>
+<div class="f" id="f-cambio" hidden><label for="cambio">¿Qué auto te gustaría?</label><input id="cambio" name="cambio" class="in" placeholder="Ej.: el Onix, o un SUV hasta U$S 15.000" autocomplete="off"></div>
+</fieldset>
+<fieldset class="campos">
+<legend class="t">Vos</legend>
+<div class="f f--movil-ancho"><label for="nombre">Nombre</label><input id="nombre" name="nombre" class="in" autocomplete="given-name"></div>
+<div class="f f--movil-ancho"><label for="cel">Celular</label><input id="cel" name="cel" class="in" type="tel" autocomplete="tel"></div>
+</fieldset>
+<p class="meta vende__priv solo-compu">No guardamos tus datos: solo arman el mensaje de WhatsApp.</p>
+</form>
+
+<aside class="vende__vista" aria-label="Vista previa del mensaje">
+<p class="hand">Así nos llega ↓</p>
+<div class="chat">
+<p class="meta solo-compu">WhatsApp · Punto Carrasco</p>
+<div class="globo" id="globo" aria-live="polite"></div>
+</div>
+<a class="btn wa solo-compu" id="enviar" href="{{wa.href}}" target="_blank" rel="noopener">{{icono.wa}}Enviar por WhatsApp</a>
+<p class="meta vende__ayuda solo-compu">Se abre WhatsApp con el mensaje listo. Lo podés cambiar antes de mandarlo.</p>
+<p class="meta vende__priv solo-movil">No guardamos tus datos: solo arman el mensaje.</p>
+</aside>
+</div>
+</main>
+
+{{> footer}}
+
+<div class="barra barra--solida solo-movil">
+<a class="btn wa" id="enviar-m" href="{{wa.href}}" target="_blank" rel="noopener">{{icono.wa}}Enviar por WhatsApp</a>
+</div>
+
+</body>
+</html>
