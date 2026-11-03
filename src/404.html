@@ -1,0 +1,26 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="pag-404{{claseBody}}">
+
+{{> header}}
+
+<main id="contenido" class="nf">
+<div class="nf__txt">
+<p class="hand">Error 404<span class="solo-movil"> · se lo llevaron…</span></p>
+<h1 class="t">Este auto ya se fue.</h1>
+<p class="nf__lead">La página que buscabas no existe, o el auto ya se vendió. Pero entran otros seguido.</p>
+<div class="botones">
+<a class="btn wa" href="{{raiz}}autos/">Ver los autos disponibles</a>
+<a class="btn" href="{{waBusco}}" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+</div>
+</div>
+<svg class="nf__dibujo" viewBox="0 0 560 300" aria-hidden="true">
+<path d="M10 250 L 550 250" stroke="#CFC7B9" stroke-width="2"/>
+<path d="M20 240 C 70 238, 100 230, 150 186 C 210 136, 300 112, 380 116 C 430 120, 452 150, 462 176" fill="none" stroke="#C8202B" stroke-width="5" stroke-linecap="round"/>
+<path d="M462 176 C 470 196, 500 186, 492 168 C 484 150, 456 170, 476 196 C 490 214, 520 222, 548 218" fill="none" stroke="#C8202B" stroke-width="5" stroke-linecap="round"/>
+<path class="solo-compu" d="M120 268 C 160 262, 210 274, 260 266" fill="none" stroke="#2B2B2E" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+<text class="solo-compu" x="300" y="72" font-family="Caveat, cursive" font-weight="700" font-size="34" fill="#B3121F">se lo llevaron…</text>
+</svg>
+</main>
+
+</body>
+</html>

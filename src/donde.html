@@ -1,0 +1,60 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="pag-donde{{claseBody}}">
+
+{{> header}}
+
+<main id="contenido" class="dpag">
+<div class="dpag__head">
+<h1 class="t">Dónde estamos</h1>
+<p class="dpag__dir"><span class="solo-compu">{{lineaDir}}</span><span class="solo-movil">{{n.domicilio}}</span></p>
+</div>
+<div class="dpag__cuerpo">
+<div class="dpag__mapa">
+<svg class="mapa mapa--compu" viewBox="0 0 760 520" role="img" aria-label="Mapa dibujado: Punto Carrasco sobre Avenida Giannattasio, entre Montevideo y Atlántida">
+<path d="M0 420 C 200 396, 380 434, 760 396 L 760 520 L 0 520 Z" fill="#CFE2EF"/>
+<text x="560" y="482" font-family="Figtree, sans-serif" font-size="16" fill="#3E4A52">Río de la Plata</text>
+<path d="M0 372 C 200 350, 380 386, 760 350" fill="none" stroke="#B9B2A6" stroke-width="3"/>
+<text x="28" y="354" font-family="Figtree, sans-serif" font-size="14" fill="#5E5B57">Rambla Costanera</text>
+<path d="M0 226 C 220 210, 500 244, 760 214" fill="none" stroke="#FFFFFF" stroke-width="22"/>
+<path d="M0 226 C 220 210, 500 244, 760 214" fill="none" stroke="#2B2B2E" stroke-width="2" stroke-dasharray="12 9"/>
+<text x="28" y="200" font-family="Figtree, sans-serif" font-weight="700" font-size="17" fill="#2B2B2E">Av. Giannattasio</text>
+<text x="28" y="264" font-family="Figtree, sans-serif" font-size="14" fill="#5E5B57">← Montevideo</text>
+<text x="640" y="264" font-family="Figtree, sans-serif" font-size="14" fill="#5E5B57">Atlántida →</text>
+<path d="M300 0 C 296 80, 310 150, 306 222" fill="none" stroke="#FFFFFF" stroke-width="10"/>
+<g fill="#2F4A3A" opacity=".45"><circle cx="110" cy="90" r="12"/><circle cx="136" cy="78" r="10"/><circle cx="620" cy="110" r="14"/><circle cx="650" cy="96" r="10"/><circle cx="380" cy="300" r="10"/><circle cx="210" cy="300" r="8"/><circle cx="540" cy="300" r="9"/></g>
+<circle cx="440" cy="228" r="11" fill="#B3121F"/>
+<path d="M486 186 C 450 150, 380 164, 382 216 C 384 268, 488 274, 508 230 C 522 200, 498 170, 462 170" fill="none" stroke="#C8202B" stroke-width="4" stroke-linecap="round"/>
+<text x="520" y="166" font-family="Caveat, cursive" font-weight="700" font-size="34" fill="#B3121F">¡acá estamos!</text>
+</svg>
+<svg class="mapa mapa--movil" viewBox="0 0 360 260" role="img" aria-label="Mapa dibujado: Punto Carrasco sobre Avenida Giannattasio">
+<path d="M0 206 C 100 196, 200 214, 360 196 L 360 260 L 0 260 Z" fill="#CFE2EF"/>
+<path d="M0 116 C 100 108, 240 124, 360 110" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+<path d="M0 116 C 100 108, 240 124, 360 110" fill="none" stroke="#2B2B2E" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="14" y="98" font-family="Figtree, sans-serif" font-weight="700" font-size="13" fill="#2B2B2E">Av. Giannattasio</text>
+<text x="14" y="146" font-family="Figtree, sans-serif" font-size="12" fill="#5E5B57">← Montevideo</text>
+<g fill="#2F4A3A" opacity=".45"><circle cx="60" cy="50" r="9"/><circle cx="300" cy="56" r="10"/><circle cx="160" cy="166" r="7"/></g>
+<circle cx="208" cy="117" r="7" fill="#B3121F"/>
+<path d="M232 96 C 214 78, 178 86, 180 114 C 182 140, 230 144, 240 122 C 246 108, 236 92, 220 92" fill="none" stroke="#C8202B" stroke-width="3" stroke-linecap="round"/>
+<text x="246" y="84" font-family="Caveat, cursive" font-weight="700" font-size="24" fill="#B3121F">¡acá!</text>
+</svg>
+<div class="botones dpag__ir">
+<a class="btn" href="{{n.maps}}" target="_blank" rel="noopener"><span class="solo-compu">Abrir en Google Maps</span><span class="solo-movil">Google Maps</span></a>
+<a class="btn" href="{{n.waze}}" target="_blank" rel="noopener"><span class="solo-compu">Ir con Waze</span><span class="solo-movil">Waze</span></a>
+</div>
+</div>
+<div class="dpag__info">
+{{horarios}}
+<section aria-labelledby="tel">
+<h2 id="tel" class="t">Hablemos</h2>
+{{hablemos}}
+</section>
+{{redes}}
+</div>
+</div>
+</main>
+
+{{> footer}}
+{{> barra-wa}}
+
+</body>
+</html>
