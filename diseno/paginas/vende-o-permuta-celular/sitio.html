@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<title>Vendé o permutá (celular) — Punto Carrasco</title>
+<script src="assets/f0680f75-4fe4-4cfa-8e2b-2ebca80740c9.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7azYYiAzcPDKo.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7YjYYiAzcPDKo.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7aDYYiAzcPDKo.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/9e54f993-97b0-4455-87a0-b17bd002366e.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7azYYiAzcPDKo.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7YjYYiAzcPDKo.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7aDYYiAzcPDKo.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/9e54f993-97b0-4455-87a0-b17bd002366e.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/41554de0-87b5-4aee-abd1-c005d836a6aa.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/41554de0-87b5-4aee-abd1-c005d836a6aa.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/41554de0-87b5-4aee-abd1-c005d836a6aa.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/41554de0-87b5-4aee-abd1-c005d836a6aa.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/41554de0-87b5-4aee-abd1-c005d836a6aa.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjgn7Motmp5r61.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/9b75e28b-8d0c-484a-aebe-8053c6b97feb.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zsTjnTLgNuZ5w.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#FBF8F3;color:#2B2B2E;font-family:Figtree,system-ui,sans-serif}
+*{box-sizing:border-box}
+a{color:#B3121F}
+:focus-visible{outline:3px solid #1D5F99;outline-offset:3px}
+.t{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em;line-height:1.02;margin:0}
+.hand{font-family:Caveat,cursive;font-weight:700;color:#B3121F;line-height:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border-radius:999px;font:600 17px/1 Figtree,sans-serif;text-decoration:none;border:2px solid #B3121F;color:#fff;background:#B3121F}
+.meta{margin:0;color:#5E5B57;font-size:15px}
+.logo{mix-blend-mode:multiply;width:auto;display:block}
+.ib{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:48px;border-radius:999px;border:2px solid #2B2B2E;background:transparent;color:#2B2B2E;font:600 15px Figtree,sans-serif;padding:0 14px}
+.f{display:flex;flex-direction:column;gap:8px}
+.f label,.lg{font-weight:600;font-size:15px}
+.in{min-height:52px;border:1.5px solid #B9B1A3;border-radius:6px;padding:0 14px;font:500 17px Figtree,sans-serif;background:#fff;color:#2B2B2E;width:100%}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{min-height:48px;padding:0 18px;border-radius:999px;border:1.5px solid #B9B1A3;background:#fff;color:#2B2B2E;font:600 16px Figtree,sans-serif}
+.seg button[aria-pressed="true"]{background:#2B2B2E;border-color:#2B2B2E;color:#fff}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+legend{padding:0;margin-bottom:16px}
+</style>
+</helmet>
+<div style="width:390px;min-height:2400px;background:#FBF8F3">
+<header style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #E7E0D4">
+<a href="Inicio-movil.dc.html" aria-label="Punto Carrasco Automóviles, inicio"><img class="logo" src="assets/924949dc-086e-4637-96b1-ec7a25504c5e.png" alt="Punto Carrasco Automóviles" style="height:48px"></a>
+<button class="ib" type="button" aria-expanded="false">Menú</button>
+</header>
+<main style="padding:28px 16px 48px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p class="hand" style="margin:0;font-size:26px">¿Y el tuyo?</p>
+<h1 class="t" style="font-size:46px">Vendé o permutá tu auto</h1>
+<p style="margin:0;font-size:17px;line-height:1.5">Un minuto. Se arma el mensaje de WhatsApp con todo ordenado.</p>
+</div>
+<form style="display:flex;flex-direction:column;gap:36px" sc-camel-on-submit="{{prevent}}">
+<fieldset><legend class="t" style="font-size:30px">Tu auto</legend>
+<div class="f"><label for="marca">Marca</label><input id="marca" class="in" value="{{s.marca}}" sc-camel-on-change="{{on.marca}}"></div>
+<div class="f"><label for="modelo">Modelo</label><input id="modelo" class="in" value="{{s.modelo}}" sc-camel-on-change="{{on.modelo}}"></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<div class="f"><label for="anio">Año</label><input id="anio" class="in" inputmode="numeric" value="{{s.anio}}" sc-camel-on-change="{{on.anio}}"></div>
+<div class="f"><label for="km">Kilómetros</label><input id="km" class="in" inputmode="numeric" value="{{s.km}}" sc-camel-on-change="{{on.km}}"></div>
+</div>
+<div class="f"><span class="lg" id="deuda-l">¿Tiene deuda?</span>
+<div class="seg" role="group" aria-labelledby="deuda-l"><button type="button" aria-pressed="{{dNo}}" sc-camel-on-click="{{setNo}}">No</button><button type="button" aria-pressed="{{dSi}}" sc-camel-on-click="{{setSi}}">Sí</button><button type="button" aria-pressed="{{dNs}}" sc-camel-on-click="{{setNs}}">No sé</button></div>
+</div>
+</fieldset>
+<fieldset><legend class="t" style="font-size:30px">¿Qué buscás a cambio?</legend>
+<div class="seg" role="group" aria-label="Qué buscás a cambio"><button type="button" aria-pressed="{{mVender}}" sc-camel-on-click="{{setVender}}">Plata</button><button type="button" aria-pressed="{{mPermuta}}" sc-camel-on-click="{{setPermuta}}">Otro auto</button></div>
+<sc-if value="{{isPermuta}}" hint-placeholder-val="{{true}}">
+<div class="f"><label for="cambio">¿Cuál te gustaría?</label><input id="cambio" class="in" value="{{s.cambio}}" sc-camel-on-change="{{on.cambio}}"></div>
+</sc-if>
+</fieldset>
+<fieldset><legend class="t" style="font-size:30px">Vos</legend>
+<div class="f"><label for="nombre">Nombre</label><input id="nombre" class="in" autocomplete="given-name" value="{{s.nombre}}" sc-camel-on-change="{{on.nombre}}"></div>
+<div class="f"><label for="cel">Celular</label><input id="cel" class="in" type="tel" autocomplete="tel" value="{{s.cel}}" sc-camel-on-change="{{on.cel}}"></div>
+</fieldset>
+</form>
+<section aria-label="Vista previa del mensaje" style="display:flex;flex-direction:column;gap:12px">
+<p class="hand" style="margin:0;font-size:26px;transform:rotate(-2deg)">Así nos llega ↓</p>
+<div style="background:#EAE4D8;border-radius:10px;padding:18px 14px;display:flex;flex-direction:column;gap:8px">
+<div style="align-self:flex-end;max-width:94%;background:#DCF5D0;border-radius:12px 2px 12px 12px;padding:12px 14px;font-size:15px;line-height:1.5;white-space:pre-line;color:#1E2A1A">{{msg}}</div>
+</div>
+<p class="meta" style="font-size:13px">No guardamos tus datos: solo arman el mensaje.</p>
+</section>
+</main>
+<div style="position:sticky;bottom:0;background:#FBF8F3;border-top:1px solid #E7E0D4;padding:12px 16px 18px">
+<a class="btn" href="{{href}}" style="width:100%"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path></svg>Enviar por WhatsApp</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:2400}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { marca: 'Volkswagen', modelo: 'Gol Trend', anio: '2015', km: '98.000', deuda: 'No', modo: 'permuta', cambio: 'Un SUV hasta U$S 15.000', nombre: 'Martina', cel: '099 123 456' };
+  }
+  renderVals() {
+    const s = this.state;
+    const set = (k) => (e) => this.setState({ [k]: e.target.value });
+    const on = {};
+    ['marca', 'modelo', 'anio', 'km', 'cambio', 'nombre', 'cel'].forEach((k) => { on[k] = set(k); });
+    const quiero = s.modo === 'permuta' ? 'permutar' : 'vender';
+    const msg = [
+      'Hola Punto Carrasco! Quiero ' + quiero + ' mi auto:',
+      '• ' + (s.marca || '[marca]') + ' ' + (s.modelo || '[modelo]') + ', año ' + (s.anio || '[año]'),
+      '• ' + (s.km || '[km]') + ' km',
+      '• Deuda: ' + s.deuda,
+      '• Busco a cambio: ' + (s.modo === 'permuta' ? (s.cambio || '[qué auto]') : 'plata'),
+      '',
+      'Soy ' + (s.nombre || '[nombre]') + ', mi celular es ' + (s.cel || '[celular]') + '.'
+    ].join('\n');
+    return {
+      s, on, msg,
+      href: 'https://wa.me/59895496461?text=' + encodeURIComponent(msg),
+      prevent: (e) => e.preventDefault(),
+      dNo: String(s.deuda === 'No'), dSi: String(s.deuda === 'Sí'), dNs: String(s.deuda === 'No sé'),
+      setNo: () => this.setState({ deuda: 'No' }), setSi: () => this.setState({ deuda: 'Sí' }), setNs: () => this.setState({ deuda: 'No sé' }),
+      mVender: String(s.modo === 'vender'), mPermuta: String(s.modo === 'permuta'), isPermuta: s.modo === 'permuta',
+      setVender: () => this.setState({ modo: 'vender' }), setPermuta: () => this.setState({ modo: 'permuta' })
+    };
+  }
+}
+</script>
+
+
+</body></html>

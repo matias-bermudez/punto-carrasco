@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<title>Panel · Editar auto (celular) — Punto Carrasco</title>
+<script src="assets/d55657cc-0b43-4574-a828-49adc9373c12.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/6efb31de-e1f9-4f9f-9ece-fc15f93cc599.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/6efb31de-e1f9-4f9f-9ece-fc15f93cc599.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/6efb31de-e1f9-4f9f-9ece-fc15f93cc599.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/6efb31de-e1f9-4f9f-9ece-fc15f93cc599.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/6efb31de-e1f9-4f9f-9ece-fc15f93cc599.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjgn7Motmp5r61.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/2b5b6e70-cd9d-4c5a-9f95-63e173c1a61b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zsTjnTLgNuZ5w.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#F5F3EF;color:#2B2B2E;font-family:Figtree,system-ui,sans-serif}
+*{box-sizing:border-box}
+a{color:#B3121F}
+img{display:block}
+:focus-visible{outline:3px solid #1D5F99;outline-offset:2px}
+.t{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;line-height:1.05;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 16px;border-radius:10px;font:600 16px/1.1 Figtree,sans-serif;text-decoration:none;border:1.5px solid #2B2B2E;color:#2B2B2E;background:#fff;cursor:pointer}
+.pri{background:#B3121F;border-color:#B3121F;color:#fff}
+.meta{margin:0;color:#5E5B57;font-size:14px}
+.card{background:#fff;border:1px solid #E7E0D4;border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:16px}
+.h{margin:0;font-size:18px;font-weight:700}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label,.lg{font-weight:600;font-size:14px}
+.in{min-height:52px;border:1.5px solid #B9B1A3;border-radius:8px;padding:0 14px;font:500 17px Figtree,sans-serif;background:#fff;color:#2B2B2E;width:100%}
+.seg{display:flex;background:#ECE8E1;border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;min-height:44px;border:0;border-radius:8px;background:transparent;font:600 15px Figtree,sans-serif;color:#2B2B2E}
+.seg button[aria-pressed="true"]{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.14)}
+.chip{min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #D6CFC3;background:#fff;font:600 14px Figtree,sans-serif;color:#2B2B2E}
+.chip[aria-pressed="true"]{background:#2B2B2E;border-color:#2B2B2E;color:#fff}
+.tile{position:relative;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:#ECE8E1;display:flex;align-items:center;justify-content:center;color:#5E5B57;font-size:12px}
+.tile .n{position:absolute;left:6px;top:6px;background:rgba(43,43,46,.85);color:#fff;font:700 12px Figtree;border-radius:999px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center}
+.tile .m{position:absolute;right:2px;bottom:2px;width:44px;height:44px;border:0;background:transparent;color:#fff;font:700 20px Figtree;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.sw{width:56px;height:32px;border-radius:999px;border:0;background:#B3121F;position:relative;flex-shrink:0}
+.sw span{position:absolute;right:3px;top:3px;width:26px;height:26px;border-radius:999px;background:#fff}
+</style>
+</helmet>
+<div style="width:390px;min-height:2900px;background:#F5F3EF">
+<header style="position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #E7E0D4;padding:8px 8px 8px 4px;display:flex;align-items:center;justify-content:space-between">
+<a href="Panel-autos-movil.dc.html" style="display:inline-flex;align-items:center;min-height:48px;padding:0 12px;color:#2B2B2E;font-weight:600;text-decoration:none">‹ Mis autos</a>
+<a href="Ficha-movil.dc.html" style="display:inline-flex;align-items:center;min-height:48px;padding:0 12px;font-weight:600">Ver en la web</a>
+</header>
+<form style="padding:16px 16px 140px;display:flex;flex-direction:column;gap:14px">
+<h1 class="t" style="font-size:36px;padding:4px 2px 2px">Chevrolet Onix LT</h1>
+
+<section class="card" aria-labelledby="fotos">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><h2 id="fotos" class="h">Fotos</h2><span class="meta">6 de 20</span></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+<label class="btn pri" style="flex-direction:column;min-height:88px;gap:6px"><svg width="26" height="26" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Sacar foto<input type="file" accept="image/*" capture="environment" style="position:absolute;opacity:0;width:1px;height:1px"></label>
+<label class="btn" style="flex-direction:column;min-height:88px;gap:6px"><svg width="26" height="26" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 16l5-5 4 4 3-3 6 6"></path></svg>Elegir de la galería<input type="file" accept="image/*" multiple="" style="position:absolute;opacity:0;width:1px;height:1px"></label>
+</div>
+<p class="meta">Sacalas de costado, con el auto entero y la foto horizontal. Mantené apretada una foto y arrastrala para cambiar el orden.</p>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+<div class="tile" style="outline:3px solid #B3121F;outline-offset:-3px"><img src="assets/55e7fba2-ecfe-41d2-b79f-50ecc259d059.jpg" alt="Foto 1, portada" style="width:100%;height:100%;object-fit:cover"><span style="position:absolute;left:0;right:0;bottom:0;background:#B3121F;color:#fff;font:700 11px Figtree;letter-spacing:.08em;text-transform:uppercase;padding:4px 6px">Portada</span><button type="button" class="m" aria-label="Opciones de la foto 1" style="bottom:14px">⋯</button></div>
+<div class="tile"><span class="n">2</span>[lateral]<button type="button" class="m" aria-label="Opciones de la foto 2" style="color:#2B2B2E;text-shadow:none">⋯</button></div>
+<div class="tile"><span class="n">3</span>[trasera]<button type="button" class="m" aria-label="Opciones de la foto 3" style="color:#2B2B2E;text-shadow:none">⋯</button></div>
+<div class="tile"><span class="n">4</span>[tablero]<button type="button" class="m" aria-label="Opciones de la foto 4" style="color:#2B2B2E;text-shadow:none">⋯</button></div>
+<div class="tile"><span class="n">5</span>[asientos]<button type="button" class="m" aria-label="Opciones de la foto 5" style="color:#2B2B2E;text-shadow:none">⋯</button></div>
+<div class="tile"><span class="n">6</span>[motor]<button type="button" class="m" aria-label="Opciones de la foto 6" style="color:#2B2B2E;text-shadow:none">⋯</button></div>
+</div>
+<div style="background:#2B2B2E;color:#fff;border-radius:12px;padding:6px;display:flex;flex-direction:column">
+<p style="margin:0;padding:10px 12px 6px;font-size:13px;color:#CFC9BF">Foto 3 · opciones</p>
+<button type="button" style="min-height:48px;text-align:left;padding:0 12px;border:0;background:transparent;color:#fff;font:600 16px Figtree">Usar como portada</button>
+<button type="button" style="min-height:48px;text-align:left;padding:0 12px;border:0;background:transparent;color:#fff;font:600 16px Figtree">Mover antes ‹ · Mover después ›</button>
+<button type="button" style="min-height:48px;text-align:left;padding:0 12px;border:0;background:transparent;color:#FFB4B4;font:600 16px Figtree">Borrar foto</button>
+</div>
+</section>
+
+<section class="card" aria-labelledby="auto">
+<h2 id="auto" class="h">El auto</h2>
+<div class="f"><label for="marca">Marca</label><input id="marca" class="in" value="Chevrolet"></div>
+<div class="f"><label for="modelo">Modelo</label><input id="modelo" class="in" value="Onix"></div>
+<div class="f"><label for="ver">Versión</label><input id="ver" class="in" value="LT 1.0 Turbo"></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<div class="f"><label for="anio">Año</label><input id="anio" class="in" inputmode="numeric" value="2021"></div>
+<div class="f"><label for="km">Kilómetros</label><input id="km" class="in" inputmode="numeric" value="45.000"></div>
+</div>
+<div class="f"><span class="lg" id="comb">Combustible</span><div class="seg" role="group" aria-labelledby="comb"><button type="button" aria-pressed="true">Nafta</button><button type="button" aria-pressed="false">Diésel</button><button type="button" aria-pressed="false">Híbrido</button></div></div>
+<div class="f"><span class="lg" id="caja">Caja</span><div class="seg" role="group" aria-labelledby="caja"><button type="button" aria-pressed="true">Manual</button><button type="button" aria-pressed="false">Automática</button></div></div>
+</section>
+
+<section class="card" aria-labelledby="precio">
+<h2 id="precio" class="h">Precio y estado</h2>
+<div style="display:flex;gap:10px;align-items:flex-end">
+<div class="f" style="width:120px"><span class="lg" id="mon">Moneda</span><div class="seg" role="group" aria-labelledby="mon"><button type="button" aria-pressed="true">U$S</button><button type="button" aria-pressed="false">$</button></div></div>
+<div class="f" style="flex:1"><label for="pr">Precio</label><input id="pr" class="in" inputmode="numeric" value="16.900" style="font-weight:800;font-size:20px"></div>
+</div>
+<div class="f"><span class="lg" id="est">Estado</span><div class="seg" role="group" aria-labelledby="est"><button type="button" aria-pressed="true">Disponible</button><button type="button" aria-pressed="false">Reservado</button><button type="button" aria-pressed="false">Vendido</button></div></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px">
+<div><p style="margin:0;font-weight:600" id="dest-l">Destacado</p><p class="meta" style="font-size:13px">Sale arriba en el inicio</p></div>
+<button type="button" class="sw" role="switch" aria-checked="true" aria-labelledby="dest-l"><span></span></button>
+</div>
+</section>
+
+<section class="card" aria-labelledby="eq">
+<h2 id="eq" class="h">Equipamiento</h2>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<button type="button" class="chip" aria-pressed="true">Aire acondicionado</button><button type="button" class="chip" aria-pressed="true">Dirección asistida</button><button type="button" class="chip" aria-pressed="true">Pantalla</button><button type="button" class="chip" aria-pressed="true">Vidrios eléctricos</button><button type="button" class="chip" aria-pressed="true">6 airbags</button><button type="button" class="chip" aria-pressed="false">Cámara de retroceso</button><button type="button" class="chip" aria-pressed="true">Sensor de estacionamiento</button><button type="button" class="chip" aria-pressed="false">Techo solar</button><button type="button" class="chip" aria-pressed="true">Llantas de aleación</button><button type="button" class="chip" aria-pressed="false">Cuero</button>
+</div>
+<div style="display:flex;gap:8px"><label for="otro" style="position:absolute;left:-9999px">Agregar otro equipamiento</label><input id="otro" class="in" placeholder="Agregar otro…"><button type="button" class="btn" style="min-height:52px">Agregar</button></div>
+</section>
+
+<section class="card" aria-labelledby="ds">
+<h2 id="ds" class="h"><label for="desc">Descripción</label></h2>
+<textarea id="desc" class="in" rows="6" style="padding:12px 14px;line-height:1.5;min-height:150px;resize:vertical">[Único dueño, services en la agencia, cubiertas nuevas. Impecable, para ver.]</textarea>
+<p class="meta" style="font-size:13px">Escribilo como en Instagram: corto y directo.</p>
+</section>
+
+<button type="button" style="min-height:52px;border:0;background:transparent;color:#B3121F;font:600 16px Figtree;text-decoration:underline">Borrar este auto</button>
+</form>
+<div style="position:sticky;bottom:0;background:#fff;border-top:1px solid #E7E0D4;padding:12px 16px 18px;display:flex;flex-direction:column;gap:6px">
+<button type="submit" class="btn pri" style="width:100%">Guardar cambios</button>
+<p class="meta" style="text-align:center;font-size:12px">Último guardado: hoy 18:42</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:2900}}">
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+
+
+</body></html>

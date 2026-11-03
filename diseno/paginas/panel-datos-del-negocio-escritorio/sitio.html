@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<title>Panel · Datos del negocio — Punto Carrasco</title>
+<script src="assets/4bd234e0-169c-438a-81b8-f0221f0ea1af.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/6cd83d90-9ece-4469-8d1a-820fd96055cb.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/6cd83d90-9ece-4469-8d1a-820fd96055cb.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/6cd83d90-9ece-4469-8d1a-820fd96055cb.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/6cd83d90-9ece-4469-8d1a-820fd96055cb.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DaRvziissg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/6cd83d90-9ece-4469-8d1a-820fd96055cb.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjgn7Motmp5r61.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/de38beb0-2988-4e78-8cd3-3358c3e74a3f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zsTjnTLgNuZ5w.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#F5F3EF;color:#2B2B2E;font-family:Figtree,system-ui,sans-serif}
+*{box-sizing:border-box}
+a{color:#B3121F}
+:focus-visible{outline:3px solid #1D5F99;outline-offset:2px}
+.t{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;line-height:1.05;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:10px;font:600 16px/1 Figtree,sans-serif;border:1.5px solid #B3121F;color:#fff;background:#B3121F;cursor:pointer}
+.meta{margin:0;color:#5E5B57;font-size:14px}
+.side a{display:flex;align-items:center;min-height:48px;padding:0 14px;border-radius:8px;color:#2B2B2E;text-decoration:none;font-weight:600}
+.side a[aria-current]{background:#F5F3EF;color:#B3121F}
+.card{background:#fff;border:1px solid #E7E0D4;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px}
+.h{margin:0;font-size:18px;font-weight:700}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label{font-weight:600;font-size:14px}
+.in{min-height:48px;border:1.5px solid #B9B1A3;border-radius:8px;padding:0 14px;font:500 16px Figtree,sans-serif;background:#fff;color:#2B2B2E;width:100%}
+.day{display:grid;grid-template-columns:minmax(0,1fr) 110px 110px;gap:10px;align-items:center}
+</style>
+</helmet>
+<div style="width:100%;min-height:1200px;background:#F5F3EF;display:flex;flex-wrap:wrap">
+<aside style="flex:1 1 240px;max-width:260px;background:#fff;border-right:1px solid #E7E0D4;padding:20px 14px;display:flex;flex-direction:column;gap:24px">
+<img src="assets/453aa508-c550-451f-b8d3-63a445eb3207.png" alt="Punto Carrasco Automóviles" style="height:56px;width:auto;align-self:flex-start;mix-blend-mode:multiply">
+<nav class="side" aria-label="Panel" style="display:flex;flex-direction:column;gap:4px">
+<a href="Panel-autos.dc.html">Mis autos</a>
+<a href="Panel-datos.dc.html" aria-current="page">Datos del negocio</a>
+<a href="Main.dc.html">Ver la web ↗</a>
+</nav>
+<a href="Panel-login.dc.html" class="meta" style="margin-top:auto;padding:12px 14px">Salir</a>
+</aside>
+<main style="flex:999 1 600px;min-width:0;padding:36px 48px 64px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<div><h1 class="t" style="font-size:48px">Datos del negocio</h1><p class="meta" style="margin-top:6px">Lo que ponés acá sale en toda la web: botones, pie de página y “Dónde estamos”.</p></div>
+<button type="submit" class="btn">Guardar</button>
+</div>
+<form style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start">
+<section class="card" aria-labelledby="wa">
+<h2 id="wa" class="h">WhatsApp y teléfonos</h2>
+<div class="f"><label for="w">WhatsApp que recibe los mensajes</label><input id="w" class="in" type="tel" value="095 496 461"><p class="meta" style="font-size:13px">Todos los botones “Me interesa” van a este número.</p></div>
+<div class="f"><label for="t1">Teléfono fijo</label><input id="t1" class="in" type="tel" value="2683 3862"></div>
+<div class="f"><label for="t2">Otro celular</label><input id="t2" class="in" type="tel" value="099 130 633"></div>
+</section>
+<section class="card" aria-labelledby="dir">
+<h2 id="dir" class="h">Dirección</h2>
+<div class="f"><label for="d">Dirección</label><input id="d" class="in" value="Av. Giannattasio km 19.600"></div>
+<div class="f"><label for="z">Barrio / ciudad</label><input id="z" class="in" value="Ciudad de la Costa, Canelones"></div>
+<div class="f"><label for="m">Link de Google Maps</label><input id="m" class="in" type="url" placeholder="Pegá el link de Google Maps"></div>
+<button type="button" style="align-self:flex-start;min-height:44px;border:0;background:transparent;color:#B3121F;font:600 15px Figtree;text-decoration:underline;padding:0;cursor:pointer">+ Agregar otra sucursal</button>
+</section>
+<section class="card" aria-labelledby="hs">
+<h2 id="hs" class="h">Horarios</h2>
+<div class="day"><span></span><span class="meta" style="font-size:13px">Desde</span><span class="meta" style="font-size:13px">Hasta</span></div>
+<div class="day"><label for="lv1" style="font-weight:600">Lunes a viernes</label><input id="lv1" class="in" value="[9:00]"><input class="in" value="[19:00]" aria-label="Lunes a viernes hasta"></div>
+<div class="day"><label for="sa1" style="font-weight:600">Sábado</label><input id="sa1" class="in" value="[9:00]"><input class="in" value="[13:00]" aria-label="Sábado hasta"></div>
+<div class="day"><span style="font-weight:600">Domingo</span><span class="meta" style="grid-column:2 / 4;min-height:48px;display:flex;align-items:center;justify-content:center;background:#ECE8E1;border-radius:8px;font-size:15px">Cerrado</span></div>
+</section>
+<section class="card" aria-labelledby="rs">
+<h2 id="rs" class="h">Redes</h2>
+<div class="f"><label for="ig">Instagram</label><input id="ig" class="in" value="@puntocarrasco"></div>
+<div class="f"><label for="fb">Facebook</label><input id="fb" class="in" placeholder="[confirmar]"></div>
+</section>
+</form>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1200}}">
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+
+
+</body></html>
