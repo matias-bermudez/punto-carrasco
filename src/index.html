@@ -1,0 +1,103 @@
+{{> head}}
+<body data-raiz="{{raiz}}" class="pag-inicio{{claseBody}}">
+
+{{> header}}
+
+<main id="contenido">
+
+<section class="hero">
+<div class="hero__txt">
+<p class="hand hero__kicker">Automotora en Carrasco</p>
+<h1 class="t hero__h1">Autos usados con el precio <span class="sub">a la vista{{icono.subrayado}}</span>.</h1>
+<p class="hero__lead">Somos Punto Carrasco, una automotora de barrio sobre Giannattasio. Elegí acá, escribinos por WhatsApp y vení a ver el auto en persona.</p>
+<div class="botones solo-compu">
+<a class="btn wa" href="{{wa.href}}" target="_blank" rel="noopener">{{icono.wa}}Escribinos por WhatsApp</a>
+<a class="btn" href="{{raiz}}autos/">Ver los autos</a>
+</div>
+<p class="meta solo-compu">{{n.linea}}</p>
+</div>
+<div class="hero__visual">
+<svg class="hero__trazo" viewBox="0 0 700 170" aria-hidden="true"><path d="M6 160 C 70 158, 110 150, 170 104 C 240 50, 360 22, 500 26 C 590 30, 640 70, 676 112 C 694 134, 680 152, 630 156" fill="none" stroke="#C8202B" stroke-width="5" stroke-linecap="round"/></svg>
+{{hero}}
+</div>
+<a class="btn solo-movil hero__ver" href="{{raiz}}autos/">{{verAutos}}</a>
+</section>
+
+{{destacados}}
+
+<section id="financiacion" class="fin" aria-labelledby="fin">
+<div class="fin__in">
+<div class="fin__txt">
+<h2 id="fin" class="t">¿Lo querés en cuotas?</h2>
+{{financiacion}}
+<p class="fin__lead">Mandanos qué auto te gusta y cuánto podés entregar. Te pasamos la cuota por WhatsApp.</p>
+<div><a class="btn wa" href="{{waCuota}}" target="_blank" rel="noopener">{{icono.wa}}Consultar mi cuota</a></div>
+</div>
+<div class="fin__nota" aria-hidden="true">
+<p class="hand">Así sacás tu cuota</p>
+<div class="fin__fila"><span>Elegís el auto</span><strong>acá en la web</strong></div>
+<div class="fin__fila"><span>Entregás</span><strong>lo que puedas</strong></div>
+<div class="fin__fila fin__fila--fin"><span>Saldo en cuotas de</span><span class="circ"><strong>te la pasamos</strong>{{icono.circulo}}</span></div>
+</div>
+</div>
+</section>
+
+<section class="vend" aria-labelledby="vend">
+<div class="vend__dibujo" aria-hidden="true">
+<svg viewBox="0 0 640 480"><path d="M6 160 C 70 158, 110 150, 170 104 C 240 50, 360 22, 500 26 C 590 30, 640 70, 676 112 C 694 134, 680 152, 630 156" transform="translate(40 150) scale(.82)" fill="none" stroke="#C8202B" stroke-width="6" stroke-linecap="round"/><circle cx="190" cy="300" r="34" fill="none" stroke="#2B2B2E" stroke-width="3"/><circle cx="470" cy="300" r="34" fill="none" stroke="#2B2B2E" stroke-width="3"/><path d="M40 336 L 600 336" stroke="#B9B2A6" stroke-width="3" stroke-linecap="round"/><text x="320" y="420" text-anchor="middle" font-family="Caveat, cursive" font-weight="700" font-size="40" fill="#B3121F">plata o permuta</text></svg>
+</div>
+<div class="vend__txt">
+<p class="hand">¿Y el tuyo?</p>
+<h2 id="vend" class="t">Vendé o permutá tu auto</h2>
+<p class="vend__lead">Contanos marca, año, kilómetros y qué buscás a cambio. Te respondemos por WhatsApp con una propuesta.</p>
+<div><a class="btn" href="{{raiz}}vende-tu-auto/">Contanos qué auto tenés</a></div>
+</div>
+</section>
+
+<section class="donde" aria-labelledby="donde">
+<div class="donde__in">
+<svg class="mapa mapa--compu" viewBox="0 0 640 420" role="img" aria-label="Mapa dibujado: Punto Carrasco sobre Avenida Giannattasio, cerca de la costa">
+<path d="M0 340 C 160 320, 300 350, 640 320 L 640 420 L 0 420 Z" fill="#CFE2EF"/>
+<text x="470" y="390" font-family="Figtree, sans-serif" font-size="15" fill="#3E4A52">Río de la Plata</text>
+<path d="M0 300 C 160 282, 300 312, 640 282" fill="none" stroke="#B9B2A6" stroke-width="3"/>
+<text x="24" y="285" font-family="Figtree, sans-serif" font-size="13" fill="#5E5B57">Rambla</text>
+<path d="M0 180 C 180 168, 420 196, 640 170" fill="none" stroke="#FFFFFF" stroke-width="18"/>
+<path d="M0 180 C 180 168, 420 196, 640 170" fill="none" stroke="#2B2B2E" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="24" y="160" font-family="Figtree, sans-serif" font-weight="700" font-size="15" fill="#2B2B2E">Av. Giannattasio</text>
+<text x="24" y="214" font-family="Figtree, sans-serif" font-size="13" fill="#5E5B57">← Montevideo</text>
+<text x="530" y="214" font-family="Figtree, sans-serif" font-size="13" fill="#5E5B57">Atlántida →</text>
+<g fill="#2F4A3A" opacity=".5"><circle cx="90" cy="80" r="10"/><circle cx="112" cy="70" r="8"/><circle cx="520" cy="96" r="12"/><circle cx="545" cy="84" r="9"/><circle cx="300" cy="250" r="9"/><circle cx="180" cy="245" r="7"/></g>
+<circle cx="372" cy="184" r="9" fill="#B3121F"/>
+<path d="M410 150 C 380 120, 320 132, 322 176 C 324 220, 410 226, 428 190 C 440 166, 420 140, 392 140" fill="none" stroke="#C8202B" stroke-width="4" stroke-linecap="round"/>
+<text x="436" y="134" font-family="Caveat, cursive" font-weight="700" font-size="30" fill="#B3121F">¡acá estamos!</text>
+</svg>
+<div class="donde__txt">
+<h2 id="donde" class="t">Dónde estamos</h2>
+<svg class="mapa mapa--movil" viewBox="0 0 360 240" role="img" aria-label="Mapa dibujado: Punto Carrasco sobre Avenida Giannattasio">
+<path d="M0 196 C 100 186, 200 204, 360 186 L 360 240 L 0 240 Z" fill="#CFE2EF"/>
+<path d="M0 104 C 100 96, 240 112, 360 98" fill="none" stroke="#FFFFFF" stroke-width="14"/>
+<path d="M0 104 C 100 96, 240 112, 360 98" fill="none" stroke="#2B2B2E" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="14" y="88" font-family="Figtree, sans-serif" font-weight="700" font-size="13" fill="#2B2B2E">Av. Giannattasio</text>
+<circle cx="208" cy="105" r="7" fill="#B3121F"/>
+<path d="M232 84 C 214 66, 178 74, 180 102 C 182 128, 230 132, 240 110 C 246 96, 236 80, 220 80" fill="none" stroke="#C8202B" stroke-width="3" stroke-linecap="round"/>
+<text x="246" y="72" font-family="Caveat, cursive" font-weight="700" font-size="24" fill="#B3121F">¡acá!</text>
+</svg>
+<p class="donde__dir">{{n.domicilio}}</p>
+{{horarioDonde}}
+<p class="donde__tels solo-compu">{{n.telefonos}}</p>
+<p class="donde__tels solo-movil">{{n.telefonosLista}}</p>
+<div class="botones">
+<a class="btn wa solo-compu" href="{{wa.href}}" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+<a class="btn" href="{{raiz}}donde-estamos/">Cómo llegar</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+{{> footer}}
+{{> barra-wa}}
+
+</body>
+</html>
